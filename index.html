@@ -1,3 +1,5 @@
+<!-- HTML stands for Hypertext Markup Language-->
+
 <!DOCTYPE html>
 <html>
 
@@ -7,22 +9,40 @@
 </head>
 
 <body>
-    <h1> Tony Li </h1>
-    <!-- 
-        the <em> tag is the emphasise tag.
-         This Italisise the texts what it wraps around.
-         However the <i> tag also does the same functionality.
-         So why not use <i>??
-         This is because the <em> tag tells the browser that the text that is wrapped is stressed. This convey meaning.
-         But the <i> tag only styles the text and does not convey any meaning.
-         It is good practice to always use <em> because it conveys meaning.
-         When we write HTML code, we care more about the structure of the content rather than how they look.
+    <table cellspacing="20">
+        <tr>
+            <td><img src="Images/Tony.jpg" alt="Tony's profile picture"></td>
+            <td>
+                <h1> Tony Li </h1>
+                <!-- Notes
+                     the <em> tag is the emphasise tag.
+                     This Italisise the texts what it wraps around.
+                     However the <i> tag also does the same functionality.
+                     So why not use <i>??
+                     This is because the <em> tag tells the browser that the text that is wrapped is stressed. This convey meaning.
+                     But the <i> tag only styles the text and does not convey any meaning.
+                     It is good practice to always use <em> because it conveys meaning.
+                     When we write HTML code, we care more about the structure of the content rather than how they look.
 
-         Another similar pair is the <b> tag which makes the target text bold.
-         But instead, you should be using the <strong> tag because it conveys meaning which tells the browser that is of strong importance.
-    -->
-    <p><em><strong>Macquarie University</strong> Student</em></p>
-    <p> I am a current 4th year university student studying a bachelor of engineering majoring in Software and a Bachelor in Commerce majoring in Finance.</p>
+                     Another similar pair is the <b> tag which makes the target text bold.
+                     But instead, you should be using the <strong> tag because it conveys meaning which tells the browser that is of strong importance.
+                 -->
+                <p>
+                    <em>
+                        <!-- Hypertext in HTML means a buch of text that can be linked together using hyperlinks.
+                             This is achieved through the <a> tag.
+                             The <a> tag which refers to the anchor tag consists of:
+                             The <a> element
+                             The href attribute which contains the link destination
+                             The closing tag (not a self closing tag)
+                        -->
+                        <strong><a href="https://www.mq.edu.au">Macquarie University</a></strong> Student
+                    </em>
+                </p>
+                <p> I am a current 4th year university student studying a bachelor of engineering majoring in Software and a Bachelor in Commerce majoring in Finance.</p>
+            </td>
+        </tr>
+    </table>
     <hr>
     <h3>Education</h3>
 
@@ -32,13 +52,81 @@
         <li>Obtained the HSC certificate</li>
         <li>Working towards a bachelors degree</li>
     </ul>
-    <h3> My Hobbies </h3>
-    <!-- This is an ordered list-->
-    <ol>
-        <li>Table Tennis</li>
-        <li>coding</li>
-        <li>food</li>
-    </ol>
+
+    <hr>
+
+    <h3>Work Experience</h3>
+    <!-- The table element is defaulted with no styling. 
+         There are NO table coloumns-->
+    <table border="1">
+        <!-- This is the table header -->
+        <tr>
+            <th>Dates</th>
+            <th>Work</th>
+        </tr>
+
+        <!-- This is the table body -->
+        <tbody>
+            <tr>
+                <!-- This means "table data" tag -->
+                <td>2019</td>
+                <td>Learning we development</td>
+            </tr>
+            <!-- This is a tag which means table rows -->
+            <tr>
+                <td>2015-Present</td>
+                <td>Working towards a bachelors degree</td>
+            </tr>
+        </tbody>
+        <!-- This is the table footer -->
+        <tfoot>
+
+        </tfoot>
+    </table>
+    <!-- Note that there are many attributes that is associated with table element, however it is not recommended because HTML is only for structuring.
+         CSS is for styling.
+         JS is for behaviour.
+    -->
+
+    <hr>
+
+    <h3>Skills</h3>
+    <table cellspacing="10">
+        <tr>
+            <td>
+                <table cellspacing="10">
+                    <tr>
+                        <td>Java</td>
+                        <td> 🎓🎓🎓</td>
+                    </tr>
+                    <tr>
+                        <td>Scala</td>
+                        <td>🎓🎓</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table cellspacing="10">
+                    <tr>
+                        <td>C</td>
+                        <td>🎓🎓</td>
+                    </tr>
+                    <tr>
+                        <td>Arduino</td>
+                        <td>🎓🎓🎓</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- The download attribute directly downloads the content on the specified link-->
+    <a download href="https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf">Download HTML cheet sheet</a>
+    <br>
+    <a href="hobbies.html">My Hobbies</a>
+    <br>
+    <a href="contact.html">My Contact Cetails</a>
+
 </body>
 
 </html>
